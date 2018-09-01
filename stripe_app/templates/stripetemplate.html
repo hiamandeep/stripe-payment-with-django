@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Stripe Payment</h1>
+<!-- <p>{{stripe_key}}</p> -->
+
+<form action="/checkout" method="POST"> {% csrf_token %}
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{stripe_key}}"
+        data-amount="100"
+        data-name="MyWebsite"
+        data-description="Website Description"
+        data-image=""
+        data-currency="usd">
+    </script>
+</form>
+
+</body>
+</html>
